@@ -3,13 +3,14 @@ tasks = []
 
 while True:
     print("\n**To-Do-List**")
-    choice = int(input("1. Add Task\n"
+    
+    try:
+        choice = int(input("1. Add Task\n"
                        "2. View Task\n"
                        "3. Update Task\n"
                        "4. Delete Task\n"
                        "5. Exit\n"
                        "\nEnter Your Choice: "))
-    try:
         if choice == 1:
             task = input("Enter Your Task: ").capitalize()
             tasks.append(task)
