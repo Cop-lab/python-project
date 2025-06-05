@@ -43,8 +43,12 @@ while True:
                 print("Which task number to edit")
                 for i in range(len(tasks)):
                     print(f"{i + 1}. {tasks[i]}")
+                print("0. To clear\n")
                 num = int(input("Which Task To Remove?: "))
-                if num >= 1 and num <= len(tasks):
+                if num == 0:
+                    removed = tasks.clear()
+                    print("Successfully clear") 
+                elif num >= 1 and num <= len(tasks):
                     removed = tasks.pop(num - 1)
                     print(f"{removed} successfully removed")
                 else:
